@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enade Games</title>
+    <link rel="stylesheet" href="./styles/headerStyle.css">
+    <link rel="stylesheet" href="./styles/homeStyle.css">
+    <script defer src="./scripts/homeScript.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li>Login</li>
+                <li>Quem Somos</li>
+                <li>Contato</li>
+            </ul>
+            <div class="input-search">
+                <input type="text">
+                <span onclick="pesquisar()">🔍</span>
+            </div>
+            <img src="./assets/profile-image.jpg" alt="imagem de perfil" srcset="">
+            
+        </nav>
+    </header>
+    <section class="destaques">
+        <h1>Os mais jogados</h1>
+        <div id="destaque-container" class="destaques-conteiner"></div>
+    </section>
+    <section class="lista-geral">
+        <div class="filtros">
+            <div class="input-search">
+                <input  type="text" id="input-pesquisa">
+                <span onclick="pesquisar()">🔍</span>
+            </div>
+            <div class="select-search">
+                
+            <select id="Genero">
+                <option selected value="Ação">Ação</option>
+                <option value="Terror">Terror</option>
+                <option value="Romance">Romance</option>
+                <option value="Corrida">Corrida</option>
+            </select>
+            <span onclick="filtrarPorGenero()">🔍</span>
+            </div>
+            <div class="select-search">
+                <select id="Plataforma">
+                    <option selected value="Steam">Steam</option>
+                    <option value="Nintendo">Nintendo</option>
+                    <option value="Epic Games">Epic Games</option>
+                    <option value="Xbox Game Pass">Xbox Game Pass</option>
+                </select>
+                <span onclick="filtrarPorPlataforma()">🔍</span>
+            </div>
+        </div>
+        <div id="lista-de-jogos" class="lista-de-jogos"></div>
+    </section>
+</body>
+</html>

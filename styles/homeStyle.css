@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Great+Vibes&family=Montserrat&family=Nunito+Sans:ital,opsz@1,6..12&family=Sacramento&family=Share+Tech+Mono&display=swap');
+
+/* laranja = #FF5722 */
+/* laranja hover = #c03004 */
+/* azivis = #2D4059 */
+
+*{
+    font-family: 'Share Tech Mono', monospace;
+    color: white;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.destaques{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 80px 0; */
+}
+.destaques > h1{
+    color: #FF5722;
+    text-align: center;
+    font-size: 54px;
+    font-weight: 600;
+}
+.destaques-conteiner{
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.destaque{
+    background-color: #2D4059;
+    box-sizing: border-box;
+    max-width: 300px;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+.destaque img{
+    width: 100px;
+    border-radius: 15px;
+}
+.lista-geral{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.filtros{
+    display: flex;
+    justify-content: end;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #FF5722;
+    height: 40px;
+    border-radius: 15px;
+    padding: 5px 50px 5px 0;
+    box-sizing: border-box;
+}
+.filtros select{
+    border: none;
+    background-color: #2D4059;
+    border-radius: 15px;
+
+}
+.select-search{
+    background-color: #2D4059;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    max-width: 300px;
+    border-radius: 15px;
+}
+.select-search select{
+    max-width: 70%;
+    height: 95%;
+    border: none;
+    background-color: #2D4059;
+    color: white;
+}
+.select-search span{
+    cursor: pointer;
+}
+.lista-de-jogos{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    box-sizing: border-box;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 30px;
+}
+.lista-de-jogos > div{
+    width: 300px;
+}
