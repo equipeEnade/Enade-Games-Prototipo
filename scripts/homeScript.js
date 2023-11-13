@@ -171,14 +171,11 @@ function organizarPorNota(){
 
 function submitForm(event){
     event.preventDefault()
-    // Obter os valores dos campos
     var titulo = document.getElementById('inputFormTitulo').value;
     var descricao = document.getElementById('inputFormDescricao').value;
     var nota = document.getElementById('inputFormNota').value;
     var urlImage = document.getElementById('inputFormImagem').value;
     var status = document.getElementById('selectFormStatus').value;
-
-    // Obter os valores selecionados dos campos de seleção múltipla
     var generosSelecionados = [];
     var generoSelect = document.getElementById('selectFormGenero');
     for (var i = 0; i < generoSelect.options.length; i++) {

@@ -17,7 +17,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding: 80px 0; */
+    padding: 50px 0 0;
 }
 .destaques > h1{
     color: #FF5722;
@@ -29,7 +29,9 @@ body{
     max-width: 1000px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 .destaque{
     background-color: #2D4059;
@@ -170,4 +172,34 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 15px;
+}
+
+@media (max-width: 650px) {
+  .form-section > h1 {
+    font-size: 36px;
+  }
+  .destaques > h1 {
+    font-size: 36px;
+  }
+  .filtros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    gap: 15px;
+    padding: 20px 0;
+  }
+  .filtros > div{
+    width: 200px;
+    display: flex;
+    justify-content: end;
+  }
+  .filtros select, .filtros input{
+    text-align: end;
+  }
+  .destaques-conteiner{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }
