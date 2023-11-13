@@ -169,6 +169,49 @@ function organizarPorNota(){
     })
 }
 
+function submitForm(event){
+    event.preventDefault()
+    // Obter os valores dos campos
+    var titulo = document.getElementById('inputFormTitulo').value;
+    var descricao = document.getElementById('inputFormDescricao').value;
+    var nota = document.getElementById('inputFormNota').value;
+    var urlImage = document.getElementById('inputFormImagem').value;
+    var status = document.getElementById('selectFormStatus').value;
+
+    // Obter os valores selecionados dos campos de seleção múltipla
+    var generosSelecionados = [];
+    var generoSelect = document.getElementById('selectFormGenero');
+    for (var i = 0; i < generoSelect.options.length; i++) {
+        if (generoSelect.options[i].selected) {
+            generosSelecionados.push(generoSelect.options[i].value);
+        }
+    }
+
+    var plataformasSelecionadas = [];
+    var plataformaSelect = document.getElementById('selectFormPlataforma');
+    for (var i = 0; i < plataformaSelect.options.length; i++) {
+        if (plataformaSelect.options[i].selected) {
+            plataformasSelecionadas.push(plataformaSelect.options[i].value);
+        }
+    }
+
+    let novoJogo = {
+        titulo: titulo,
+        descricao: descricao,
+        plataformas: plataformasSelecionadas,
+        status: status,
+        generos: generosSelecionados,
+        imagem: urlImage,
+        nota: nota
+    }
+    adicionarJogo(novoJogo)
+    ListarJogos(jogos)
+}
+function adicionarJogo(jogo){
+    jogos.push(jogo)
+    alert(`O jogo: ${jogo.titulo} foi adicionado`)
+}
+
 window.onload = function(){
     organizarPorNota()
     ListarGamesMelhorAvaliados()
