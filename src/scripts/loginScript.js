@@ -49,6 +49,11 @@ function cadastrarUsuarios() {
     let password = document.getElementById('cadastro_senha').value;
     let password2 = document.getElementById('cadastro_senha2').value;
 
+    if (name == "" || date == "" || login === "" || password == "" || password2 == "") {
+        alert("Por favor, preencha todos os campos.");
+        return
+    }
+
     if (password != password2) {
         alert('As senhas digitadas não são iguais. Digite novamente.')
         return
