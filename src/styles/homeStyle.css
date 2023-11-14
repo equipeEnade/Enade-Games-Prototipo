@@ -17,7 +17,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding: 80px 0; */
+    padding: 50px 0 0;
 }
 .destaques > h1{
     color: #FF5722;
@@ -29,7 +29,9 @@ body{
     max-width: 1000px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 .destaque{
     background-color: #2D4059;
@@ -98,4 +100,106 @@ body{
 }
 .lista-de-jogos > div{
     width: 300px;
+}
+.form-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 0;
+}
+.form-section > h1{
+    color: #FF5722;
+    text-align: center;
+    font-size: 54px;
+    font-weight: 600;
+}
+.form-section form{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 500px;
+    width: 100%;
+    background-color: #FF5722;
+    padding: 50px 0 100px;
+    border-radius: 15px;
+}
+.form-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+.form-section input, .form-section select{
+    color: #FF5722;
+    box-sizing: border-box;
+    background-color: #2D4059;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+}
+.form-section input{
+    width: 200px;
+    height: 40px;
+    color: white;
+}
+.form-section select{
+    width: 200px;
+    color: #FF5722;
+    
+}
+#selectFormStatus{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    text-align: center;
+}
+.form-section button{
+    display: block;
+    background-color: #2D4059;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+}
+
+.form-box > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+@media (max-width: 650px) {
+  .form-section > h1 {
+    font-size: 36px;
+  }
+  .destaques > h1 {
+    font-size: 36px;
+  }
+  .filtros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    gap: 15px;
+    padding: 20px 0;
+  }
+  .filtros > div{
+    width: 200px;
+    display: flex;
+    justify-content: end;
+  }
+  .filtros select, .filtros input{
+    text-align: end;
+  }
+  .destaques-conteiner{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }

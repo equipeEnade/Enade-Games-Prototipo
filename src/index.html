@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/loginStyle.css" />
+    <script defer src="./scripts/loginScript.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Great+Vibes&family=Montserrat&family=Nunito+Sans:ital,opsz@1,6..12&family=Sacramento&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./assets/logo.jfif" type="image/x-icon" />
+    <title>Enade Games</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="container-conteudo-esquerda"></div>
+
+      <div id="container-conteudo-direita">
+        <div id="area-login">
+          <div id="card-login">
+            <div id="card-login-titulo">
+              <h2>FAÇA SEU LOGIN</h2>
+            </div>
+            <hr class="linha-horizontal" />
+            <div id="card-login-form">
+              <form action="" class="formulario">
+                <label for="login">USUÁRIO</label>
+                <input required
+                  type="text"
+                  name="login"
+                  id="login"
+                  placeholder="digite o seu login"
+                />
+                <label for="password">SENHA</label>
+                <input required
+                  type="password"
+                  id="password"
+                  placeholder="digite sua senha"
+                />
+              </form>
+            </div>
+            <hr class="linha-horizontal" />
+            <div id="area-criar-perfil">
+              <p>
+                Não possui conta?
+                <button id="btn-criar-perfil" onclick="visualizar()">
+                  CRIAR PERFIL
+                </button>
+              </p>
+            </div>
+            <div id="btn-login">
+              <button onclick="validarUsuario()">LOGIN</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="area-cadastro" class="esconder">
+          <div id="card-cadastro">
+            <div id="card-cadastro-titulo">
+              <h2>CRIAR PERFIL</h2>
+            </div>
+
+            <hr class="linha-horizontal" />
+
+            <div id="card-cadastro-form">
+              <form action="" class="formulario">
+                <label for="nome">NOME</label>
+                <input required
+                  type="text"
+                  name="nome"
+                  id="nome"
+                  placeholder="nome e sobrenome"
+                  required
+                />
+                <label for="data_nascimento">DATA DE NASCIMENTO</label>
+                <input required
+                  type="date"
+                  name="'data_nascimento"
+                  id="data_nascimento"
+                  placeholder=""
+                  required
+                />
+                <label for="e-mail">E-MAIL</label>
+                <input required
+                  type="email"
+                  id="e-mail"
+                  placeholder="seu e-mail"
+                  required
+                />
+                <label for="cadastro_senha">DIGITE SUA SENHA</label>
+                <input required
+                  type="password"
+                  name="senha"
+                  id="cadastro_senha"
+                  placeholder="********"
+                  required
+                />
+                <label for="cadastro_senha2">CONFIRME SUA SENHA</label>
+                <input required
+                  type="password"
+                  name="senha_2"
+                  id="cadastro_senha2"
+                  placeholder="********"
+                  required
+                />
+              </form>
+            </div>
+
+            <hr class="linha-horizontal" />
+
+            <div id="btn-login">
+              <button onclick="cadastrarUsuarios()">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
