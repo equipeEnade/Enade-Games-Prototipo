@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enade Games</title>
+    <link rel="stylesheet" href="../styles/headerStyle.css" />
+    <link rel="stylesheet" href="../styles/homeStyle.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <script defer src="../scripts/homeScript.js"></script>
+    <link rel="shortcut icon" href="../assets/logo.jfif" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <ul>
+          <li><a href="../index.html">Logout</a></li>
+          <li>Quem Somos</li>
+          <li>
+            <a
+              href="https://github.com/orgs/equipeEnade/repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+        <img
+          src="../assets/profile-image.jpg"
+          alt="imagem de perfil"
+          srcset=""
+        />
+      </nav>
+    </header>
+    <section class="destaques">
+      <h1>Os Melhores Avaliados</h1>
+      <div id="destaque-container" class="destaques-conteiner"></div>
+    </section>
+    <section class="lista-geral">
+      <div class="filtros">
+        <div class="input-search">
+          <input type="text" id="input-pesquisa" />
+          <span onclick="pesquisar()">🔍</span>
+        </div>
+        <div class="select-search">
+          <select id="Genero">
+            <option selected value="Ação">Ação</option>
+            <option value="Terror">Terror</option>
+            <option value="Romance">Romance</option>
+            <option value="Corrida">Corrida</option>
+            <option value="RPG">RPG</option>
+          </select>
+          <span onclick="filtrarPorGenero()">🔍</span>
+        </div>
+        <div class="select-search">
+          <select id="Plataforma">
+            <option selected value="Steam">Steam</option>
+            <option value="Nintendo">Nintendo</option>
+            <option value="Epic Games">Epic Games</option>
+            <option value="Xbox Game Pass">Xbox Game Pass</option>
+          </select>
+          <span onclick="filtrarPorPlataforma()">🔍</span>
+        </div>
+      </div>
+      <div id="lista-de-jogos" class="lista-de-jogos"></div>
+    </section>
+    <section class="form-section">
+      <h1>Cadastre Um Novo Jogo</h1>
+      <form onsubmit="submitForm(event)">
+        <div class="form-box">
+          <div>
+            <label for="">Titulo:</label>
+            <input required type="text" name="titulo" id="inputFormTitulo" />
+          </div>
+
+          <div>
+            <label for="">Descrição:</label>
+            <input
+              required
+              type="text"
+              name="descricao"
+              id="inputFormDescricao"
+            />
+          </div>
+
+          <div>
+            <label for="">Nota:</label>
+            <input required type="number" name="nota" id="inputFormNota" />
+          </div>
+
+          <div>
+            <label for="">Url Imagem</label>
+            <input required type="text" name="urlImage" id="inputFormImagem" />
+          </div>
+
+          <div>
+            <label for="">Genero:</label>
+            <select required id="selectFormGenero" multiple>
+              <option selected value="Ação">Ação</option>
+              <option value="Terror">Terror</option>
+              <option value="Romance">Romance</option>
+              <option value="Corrida">Corrida</option>
+              <option value="RPG">RPG</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="">Plataformas:</label>
+            <select required id="selectFormPlataforma" multiple>
+              <option selected value="Steam">Steam</option>
+              <option value="Nintendo">Nintendo</option>
+              <option value="Epic Games">Epic Games</option>
+              <option value="Xbox Game Pass">Xbox Game Pass</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="">Status:</label>
+            <select required id="selectFormStatus">
+              <option selected value="Concluído">Concluido</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+  </body>
+</html>
