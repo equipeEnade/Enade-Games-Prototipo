@@ -2,7 +2,7 @@ var jogos_melhor_avaliados = [];
 var jogos = [
     {
         titulo: "Cyberpunk 77",
-        descricao: "Muito bom, belos bugs",
+        descricao: "Jogo de ação com cyborg, bugs, carros, armas e tudo que é de bom",
         plataformas: ["Steam", "Epic Games"],
         status: "Jogando",
         generos: ["Ação", "RPG"],
@@ -11,7 +11,7 @@ var jogos = [
     },
     {
         titulo: "Doki doki literature club",
-        descricao: "Gostei muito, achei saudável",
+        descricao: "Jogo de romance com plot twist bizarro",
         plataformas: ["Steam", "Epic Games", "Nintendo"],
         status: "Concluído",
         generos: ["Romance", "Terror"],
@@ -20,7 +20,7 @@ var jogos = [
     },
     {
         titulo: "Sonic",
-        descricao: "Achei muito rápido e azul",
+        descricao: "Um boneco azul que corre bastante",
         plataformas: ["Nintendo"],
         status: "Jogando",
         generos: ["Ação", "Corrida"],
@@ -29,10 +29,10 @@ var jogos = [
     },
     {
         titulo: "Mario",
-        descricao: "Não encontrei o vazamento",
+        descricao: "Um encanador que fica pulando em tartaruga e outros animais silvestres",
         plataformas: ["Nintendo"],
         status: "Concluído",
-        generos: ["Ação", "2D"],
+        generos: ["Ação"],
         imagem: "../assets/mario-icon.png",
         nota: 10
     }
