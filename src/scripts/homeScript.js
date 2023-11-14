@@ -223,6 +223,6 @@ function transicao(lugar){
 }
 window.onload = function(){
     organizarPorNota()
-    // ListarGamesMelhorAvaliados()
-    // ListarJogos()
+    ListarGamesMelhorAvaliados()
+    ListarJogos()
 }

@@ -13,8 +13,8 @@ body{
 
 #container{
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 #container-conteudo-esquerda{
@@ -118,8 +118,20 @@ form input{
     width: 80%;
     height: 80px;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
     justify-content: center;
+}
+.btn-retornar{
+    display: flex;
+    color: #FF5722;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 120px;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
 #btn-login button{

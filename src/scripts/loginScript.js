@@ -23,9 +23,6 @@ function validarUsuario() {
     let teste = false
 
 
-    console.table(listaDeUsuarios)
-    console.log(login,senha);
-
     listaDeUsuarios.forEach(usuario => {
         if (usuario.email == login && usuario.senha == senha) {
             teste = true
@@ -64,10 +61,27 @@ function cadastrarUsuarios() {
         senha: password
     }
 
+    let existente = false
+
+
+    listaDeUsuarios.forEach(usuario => {
+        if (usuario.email == login) {
+            existente = true
+        }
+    })
+
+    if (existente == true) {
+        alert('Erro ao cadastrar usuario, tente outro email')
+        return
+        
+    } else {
+        alert('Usuario cadastrado com sucesso')
+    }
+
     listaDeUsuarios.push(novoUsuario)
     console.table(listaDeUsuarios);
 
-    alert('Usuario cadastrado com sucesso')
+    
 
     document.getElementById('nome').value = '';
     document.getElementById('data_nascimento').value = '';
