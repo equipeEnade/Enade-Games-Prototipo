@@ -208,9 +208,21 @@ function adicionarJogo(jogo){
     jogos.push(jogo)
     alert(`O jogo: ${jogo.titulo} foi adicionado`)
 }
-
+function transicao(lugar){
+    if(lugar == "topo"){
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+    }else if (lugar == "cadatrar-jogos"){
+        window.scrollTo({
+            top: document.getElementById(lugar).offsetTop,
+            behavior: 'smooth'
+          });
+    }
+}
 window.onload = function(){
     organizarPorNota()
-    ListarGamesMelhorAvaliados()
-    ListarJogos()
+    // ListarGamesMelhorAvaliados()
+    // ListarJogos()
 }
